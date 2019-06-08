@@ -79,6 +79,6 @@ Making Chung-Ang-University at Minecraft with C.
 
 . 과제를 설명하는 유투브 동영상
 
-
+       https://www.youtube.com/watch?v=iQiAbWClRdo&t=1s
 
 
