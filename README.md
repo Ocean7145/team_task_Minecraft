@@ -77,6 +77,126 @@ Making Chung-Ang-University at Minecraft with C.
 
     void make_kim_riceandpotato(int x, int y, int z);
 
+-->
+프로그램 동작시
+마을크기 입력받는다.
+swap(&array_x1, &array_x2);를 이용하여 숫자를 잘이용할 수 있게 한다.
+
+크기에 맞게 바닥을 생성한다. //makefloor(array_x1, array_z1, array_x2, array_z2);
+14개의 건물 중 한 건물을 선택한다.
+만약 1번 건물인 310관을 입력하면
+process310(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);이 실행된다.
+
+이 함수는 다른 함수를 호출하는데 순서는 아래와 같다.(310관 만들 때)
+process310(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+       
+       -make310(x, y, z);
+              -make310_body(x, y, z);
+              -make310_decorating(x, y, z);
+              -make310_window(x, y, z);
+              -make310_eliminating(x, y, z);
+              - 그 외 처리
+
+       -arraymark(array, (int)(134 / size_darray_x), (int)(60 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(208관 만들 때)
+process208(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+       -make208(x, y, z);
+       	-make208_body(x, y, z);
+       	-make208_decorating(x, y, z);
+
+	-arraymark(array, (int)(118 / size_darray_x), (int)(15 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(운동장 만들 때)
+processground(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+       -makeground(x, y, z);
+       
+       -arraymark(array, (int)(75 / size_darray_x), (int)(50 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(기숙사 앞 주차장 만들 때)
+processparkingplace(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-makeparkingplace(x, y, z);
+       
+	-arraymark(array, (int)(20 / size_darray_x), (int)(50 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(운동장 앞 화단을 만들 때)
+processflower(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-makeflower(x, y, z);
+	-arraymark(array, (int)(5 / size_darray_x), (int)(30 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(등을 만들 때)
+process_kim_lamp(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-make_kim_lamp(x, y, z);
+	-arraymark(array, (int)(3 / size_darray_x), (int)(3 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(교차로를 만들 때)
+process_kim_road_mid(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-make_kim_road_mid(x, y, z);
+	-arraymark(array, (int)(10 / size_darray_x), (int)(10 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(x축 방향 도로를 만들 때)
+process_kim_road_garo(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-make_kim_road_garo(x, y, z);
+	-arraymark(array, (int)(60 / size_darray_x), (int)(10 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(z축 방향 도로를 만들 때)
+process_kim_road_sero(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-make_kim_road_sero(x, y, z);
+	-arraymark(array, (int)(10 / size_darray_x), (int)(60 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(카우버거를 만들 때)
+process_hong_cauburger(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-make_hong_cauburger(x, y, z);
+	-arraymark(array, (int)(30 / size_darray_x), (int)(30 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(편의점을 만들 때)
+process_hong_seven(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-make_hong_seven(x, y, z);
+	-arraymark(array, (int)(35 / size_darray_x), (int)(35 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(101관을 만들 때)
+process101(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-make101(x, y, z);
+	-arraymark(array, (int)(54 / size_darray_x), (int)(12 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+(청룡 연못을 만들 때)
+processpond(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-makepond(x, y, z);
+              -crtrect(empty, ex, ey - i, ez, ex + 52, ez + 54);
+	       -installStairs(bench, ex + 24, ey - 3, ez + 13, FACING_NORTH);
+	       -crtstree(ex + 40, ey - 3, ez + 4);
+	       -crtslight(ex + 38, ey - 3, ez + 13);
+              - 
+
+	-arraymark(array, (int)(64 / size_darray_x), (int)(55 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+
+
+(라이스앤포테이토 만들때)
+process_kim_riceandpotato(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
+
+	-make_kim_riceandpotato(x, y, z);
+	-arraymark(array, (int)(35 / size_darray_x), (int)(35 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
+
+매 실행마다 arrayprintf(array);가 실행되도록 한다.
+
+이렇게 하여 기본함수의 개수는 23개
+기본함수를 활용하는 함수는 14개
+기본함수를 활용하는 함수를 활용하는 함수는 3개이다.
+
+
 . 과제를 설명하는 유투브 동영상
 
        https://www.youtube.com/watch?v=iQiAbWClRdo&t=1s
