@@ -105,7 +105,7 @@ swap(&array_x1, &array_x2);를 이용하여 숫자를 잘이용할 수 있게 �
 크기에 맞게 바닥을 생성한다. //makefloor(array_x1, array_z1, array_x2, array_z2);
 14개의 건물 중 한 건물을 선택한다.
 
-1. 310관
+## 1. 310관
 
 만약 1번 건물인 310관을 입력하면
 process310(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);이 실행된다.
@@ -123,7 +123,7 @@ process310(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
        -arraymark(array, (int)(134 / size_darray_x), (int)(60 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
 
-2. 208관
+## 2. 208관
 
 process208(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
@@ -133,7 +133,7 @@ process208(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
 	-arraymark(array, (int)(118 / size_darray_x), (int)(15 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-3. 운동장
+## 3. 운동장
 
 processground(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
@@ -141,7 +141,7 @@ processground(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
        
        -arraymark(array, (int)(75 / size_darray_x), (int)(50 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-4. 기숙사 앞 주차장
+## 4. 기숙사 앞 주차장
 
 processparkingplace(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
@@ -149,63 +149,63 @@ processparkingplace(x, y, z, array, size_darray_x, size_darray_z, array_x1, arra
        
 	-arraymark(array, (int)(20 / size_darray_x), (int)(50 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-5. 운동장 앞 화단
+## 5. 운동장 앞 화단
 
 processflower(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
 	-makeflower(x, y, z);
 	-arraymark(array, (int)(5 / size_darray_x), (int)(30 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-6. 등
+## 6. 등
 
 process_kim_lamp(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
 	-make_kim_lamp(x, y, z);
 	-arraymark(array, (int)(3 / size_darray_x), (int)(3 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-7. 교차로
+## 7. 교차로
 
 process_kim_road_mid(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
 	-make_kim_road_mid(x, y, z);
 	-arraymark(array, (int)(10 / size_darray_x), (int)(10 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-8. x축 방향 도로
+## 8. x축 방향 도로
 
 process_kim_road_garo(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
 	-make_kim_road_garo(x, y, z);
 	-arraymark(array, (int)(60 / size_darray_x), (int)(10 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-9. z축 방향 도로
+## 9. z축 방향 도로
 
 process_kim_road_sero(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
 	-make_kim_road_sero(x, y, z);
 	-arraymark(array, (int)(10 / size_darray_x), (int)(60 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-10. 카우버거
+## 10. 카우버거
 
 process_hong_cauburger(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
 	-make_hong_cauburger(x, y, z);
 	-arraymark(array, (int)(30 / size_darray_x), (int)(30 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-11. 편의점
+## 11. 편의점
 
 process_hong_seven(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
 	-make_hong_seven(x, y, z);
 	-arraymark(array, (int)(35 / size_darray_x), (int)(35 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-12. 101관
+## 12. 101관
 
 process101(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
 	-make101(x, y, z);
 	-arraymark(array, (int)(54 / size_darray_x), (int)(12 / size_darray_z), -(int)(array_z1 / size_darray_z) + (int)(z / size_darray_z), -(int)(array_x1 / size_darray_x) + (int)(x / size_darray_x));
 
-13. 청룡 연못
+## 13. 청룡 연못
 
 processpond(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
@@ -220,7 +220,7 @@ processpond(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
 
 
-14. 라이스 앤 포테이토
+## 14. 라이스 앤 포테이토
 
 process_kim_riceandpotato(x, y, z, array, size_darray_x, size_darray_z, array_x1, array_z1);
 
